@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/add_shoot"
+        android:title="Add Shoot"
+        android:contentDescription="AddShoot"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/white_crest_icon"
+        android:padding = "10dp"
+       />
+
+
+    <item
+        android:id="@+id/rename_shoots"
+        android:title="Rename"
+        android:contentDescription="More"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/change_description_shoots"
+        android:title="Change description"
+        android:contentDescription="Description"
+        app:showAsAction="never" />
+
+
+</menu>

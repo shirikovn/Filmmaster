@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/createNewSceneTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create new scene"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldForSceneNameDialog"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/bebasneue_regular"
+        app:fontFamily="@font/bebasneue_regular"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldForSceneNameDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        android:hint="scene name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createNewSceneTW">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sceneNameDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldForSceneDescription"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="short description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outlinedTextFieldForSceneNameDialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sceneShortDescriptionDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

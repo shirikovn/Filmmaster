@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "221769598050",
+    "project_id": "filmaker-3e689",
+    "storage_bucket": "filmaker-3e689.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221769598050:android:9e0de25e63bf2249aa3d3b",
+        "android_client_info": {
+          "package_name": "com.example.mvvmprototyping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221769598050-4h1is42rropv1ideavh8m935msrpe9so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK-hEsQOEnB7RLEO3miakRh8UNfsJK-V4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221769598050-4h1is42rropv1ideavh8m935msrpe9so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

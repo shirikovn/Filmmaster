@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FilMaster</string>
+    <string name="login">LOGIN</string>
+
+    <string-array name="camera_shots">
+        <item>Low angel</item>
+        <item>High angel</item>
+        <item>Dutch angel</item>
+        <item>Overhead shot</item>
+        <item>Eye level</item>
+        <item>Shoulder level</item>
+        <item>Hip level</item>
+        <item>Ground level</item>
+    </string-array>
+
+    <string-array name="shots_size">
+        <item>Establishing shot</item>
+        <item>MasterShot</item>
+        <item>Wide shot</item>
+        <item>Full shot</item>
+        <item>Medium Full shot</item>
+        <item>Medium shot</item>
+        <item>Medium close up</item>
+        <item>Close up</item>
+        <item>Extreme Close up</item>
+    </string-array>
+
+    <string-array name="camera_framing">
+        <item>Single</item>
+        <item>2-Shot</item>
+        <item>3-Shot</item>
+        <item>4-Shot</item>
+        <item>5-Shot</item>
+        <item>Crowd Shot</item>
+        <item>OTS</item>
+        <item>POV</item>
+        <item>Insert Shot</item>
+    </string-array>
+
+</resources>

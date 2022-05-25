@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ordinaryMode"
+        android:enabled="true"
+        android:icon="@drawable/plus_icon_2"
+        android:title="ordinaryMode"
+        android:checked="false"/>
+    <item
+        android:id="@+id/sceneryMode"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_upgrade_24"
+        android:title="sceneryMode"
+        android:checked="true"/>
+</menu>
