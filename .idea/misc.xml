@@ -17,10 +17,10 @@
         <entry key="app/src/main/res/layout/choose_project_new_project_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/choose_scene_item.xml" value="0.38669064748201437" />
         <entry key="app/src/main/res/layout/create_new_scene_dialog.xml" value="0.2765625" />
-        <entry key="app/src/main/res/layout/fragment_auth.xml" value="0.17353175113075658" />
+        <entry key="app/src/main/res/layout/fragment_auth.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_choose_projecct.xml" value="0.14096916299559473" />
         <entry key="app/src/main/res/layout/fragment_choose_scene.xml" value="0.2572240193684896" />
-        <entry key="app/src/main/res/layout/fragment_create_project.xml" value="0.28983459472656253" />
+        <entry key="app/src/main/res/layout/fragment_create_project.xml" value="0.17167053222656253" />
         <entry key="app/src/main/res/layout/fragment_manage_shoots.xml" value="0.20809248554913296" />
         <entry key="app/src/main/res/layout/fragment_scenery_mode.xml" value="0.23599828986746474" />
         <entry key="app/src/main/res/layout/manage_shoots_item.xml" value="0.4681724845995893" />

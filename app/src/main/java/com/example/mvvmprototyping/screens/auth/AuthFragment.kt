@@ -48,17 +48,44 @@ class AuthFragment(
             viewModel.launchChooseProject()
         }
 
+//        binding.goToForgotPassword.setOnClickListener{
+//            binding.passwordFieldLayout.visibility = View.GONE
+//
+//            val email = binding.emailField.text.toString()
+//
+//            if(binding.emailField.text.toString() != "") {
+//                Firebase.auth.sendPasswordResetEmail(email)
+//            }
+//        }
+
         binding.textButton.setOnClickListener {
+            if(binding.emailField.text.toString() != "" && binding.passwordField.text.toString() != "") {
             if(binding.textButton.text == "LOGIN") {
-                signIn(binding.emailField.text.toString(), binding.passwordField.text.toString())
-            } else {
-                if(binding.passwordField.text.toString() == (binding.passwordField2.text.toString())) {
+                    signIn(
+                        binding.emailField.text.toString(),
+                        binding.passwordField.text.toString()
+                    )
+            }
+            else {
+                if (binding.passwordField.text.toString() == (binding.passwordField2.text.toString())) {
                     createAccount(
                         binding.emailField.text.toString(),
                         binding.passwordField.text.toString()
                     )
                 } else {
                     Toast.makeText(requireContext(), "WRONG PASSWORD", Toast.LENGTH_LONG).show()
+                }
+            }
+            } else {
+                Toast.makeText(requireContext(), "INPUT DATA", Toast.LENGTH_LONG).show()
+            }
+
+            if(binding.goToForgotPassword.text.toString() == "SIGN IN"){
+                val email = binding.emailField.text.toString()
+                Toast.makeText(requireContext(), "EMAIL SEND", Toast.LENGTH_LONG).show()
+                if(email != "") {
+                    Firebase.auth.sendPasswordResetEmail(email)
+                    Toast.makeText(requireContext(), "EMAIL SEND", Toast.LENGTH_LONG).show()
                 }
             }
 
@@ -73,7 +100,10 @@ class AuthFragment(
                 binding.passwordField2.visibility = View.VISIBLE
                 binding.goToRegisterButton.text = "SIGN IN"
                 binding.textButton.text = "REGISTER"
-            }else{
+            }
+
+
+            else{
                 binding.repeatPasswordFieldLayout.visibility = View.GONE
                 binding.passwordField2.visibility = View.GONE
                 binding.goToRegisterButton.text = "NEW USER? SIGN UP"
@@ -87,15 +117,25 @@ class AuthFragment(
         }
 
         binding.goToForgotPassword.setOnClickListener {
-            //TODO
+            if(binding.textButton.text == "SEND EMAIL"){
+                binding.passwordFieldLayout.visibility = View.VISIBLE
+                binding.textButton.text = "LOGIN"
+                binding.goToForgotPassword.text = "forgot password"
+            } else {
+                binding.passwordFieldLayout.visibility = View.GONE
+                binding.textButton.text = "SEND EMAIL"
+                binding.goToForgotPassword.text = "SIGN IN"
+            }
         }
 
         return binding.root
     }
 
     fun createAccount(email: String, password: String){
+        binding.progressBarAuth.visibility = View.VISIBLE
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
+                binding.progressBarAuth.visibility = View.GONE
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAGTAG", "createUserWithEmail:success")
@@ -117,6 +157,7 @@ class AuthFragment(
                     Log.w("TAGTAG", "createUserWithEmail:failure", task.exception)
                     Toast.makeText(requireContext(), "Authentication failed.",
                         Toast.LENGTH_SHORT).show()
+                    binding.progressBarAuth.visibility = View.GONE
 
                 }
         }
@@ -124,6 +165,7 @@ class AuthFragment(
 
 
     fun signIn(email: String, password: String){
+        binding.progressBarAuth.visibility = View.VISIBLE
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                if (task.isSuccessful) {
@@ -137,6 +179,7 @@ class AuthFragment(
                 Log.w("TAGTAG", "signInWithEmail:failure", task.exception)
                 Toast.makeText(requireContext(), "Authentication failed.",
                     Toast.LENGTH_SHORT).show()
+                   binding.progressBarAuth.visibility = View.GONE
             }
         }
     }

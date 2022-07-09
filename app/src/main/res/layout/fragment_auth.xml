@@ -48,11 +48,16 @@
             android:id="@+id/emailFieldLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email">
+            android:hint="Email"
+            >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:minLines="1"
             />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,6 +75,9 @@
             android:layout_height="wrap_content"
 
             android:inputType="textPassword"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
             />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,11 +91,15 @@
             android:visibility="gone"
             >
             <EditText
+
                 android:id="@+id/passwordField2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:inputType="textPassword"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:minLines="1"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -122,6 +134,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textButton" />
 
     <TextView
+        android:visibility="invisible"
+
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,6 +146,8 @@
         app:layout_constraintStart_toStartOf="@+id/continueWithGoogle" />
 
     <Button
+        android:visibility="invisible"
+
         android:id="@+id/continueWithGoogle"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="wrap_content"
@@ -146,6 +162,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textButton"
         app:layout_constraintVertical_bias="0.869" />
+
+    <ProgressBar
+        android:id="@+id/progressBarAuth"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_width="99dp"
+        android:layout_height="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

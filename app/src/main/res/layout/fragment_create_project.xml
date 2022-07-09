@@ -68,9 +68,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:text="Create"
-        app:layout_constraintEnd_toEndOf="@+id/newProjectTeamTILayout"
-        app:layout_constraintTop_toBottomOf="@+id/loadImage" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadImage"
+        app:layout_constraintVertical_bias="0.818" />
 
     <ImageView
         android:padding="0dp"
